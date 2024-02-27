@@ -1,0 +1,31 @@
+body{
+    background-image: url("https://jooinn.com/images/italian-food-background-1.jpg");
+}
+.login{
+    color: aliceblue;
+    font-family: 'Caveat', cursive;
+    width: 30rem;
+    height: 23rem;
+    background-color: rgba(15, 20, 24, 0.516);
+    border: 3px solid rgba(88, 56, 233, 0.048);
+    margin-top: 15rem;
+    margin-left: 45rem;
+    font-size: 2rem;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-right: 3rem;
+    
+}
+.butt{
+    padding-left: 25rem;
+    margin-bottom: rem ;
+    
+    
+    
+}
+.label{
+    margin-top: 2rem;
+    padding-right: 6rem;
+}
