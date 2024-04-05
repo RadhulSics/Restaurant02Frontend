@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from'./components/Navbar';
+import Addfood from './components/Addfood';
+import Viewfood from './components/Viewfood';
+import StafReg from'./components/StafReg';
+import Reg from'./components/Reg.css';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Addfood/>
+      <Viewfood/>
+      <StafReg/>
+      {/* <Staffregister/> */}
+      <BrowserRouter>
+      <Routes> 
+        
+        <Route path="/Navbar" element={<Navbar/>}/>
+         <Route path="/Addfood" element={<Addfood/>}/> 
+         <Route path="/Viewfood" element={<Viewfood/>}/>
+         <Route path="/StafReg"element={<StafReg/>}/> 
+</Routes>
+</BrowserRouter>
+      
     </div>
   );
 }
