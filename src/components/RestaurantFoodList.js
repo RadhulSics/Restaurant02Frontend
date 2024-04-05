@@ -6,7 +6,6 @@ import { device } from '../../constants/devices';
 import { addProduct, getProducts, deleteProduct } from '../../WebAPIs';
 // import Pagination from '../../components/Pagination';
 // import Loader from '../../components/Loader';
-
 const reuseInputAttributes = css`
   margin: 10px 10px;
   border-color: black;

@@ -21,7 +21,7 @@ function App() {
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <Dashboardadmin /> */}
       <BrowserRouter>
-<Routes>
+      <Routes>
       <Route path="/menu" element={<Menu />} />
     </Routes>
     </BrowserRouter>

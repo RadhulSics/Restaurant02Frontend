@@ -58,5 +58,4 @@ function AddMenuItemForm({ onAddMenuItem }) {
     </form>
   )
 }
-
 export default AddMenuItemForm

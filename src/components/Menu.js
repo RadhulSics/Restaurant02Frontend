@@ -5,7 +5,6 @@ import AddMenuItemForm from './AddMenuItemForm'
 function Menu() {
   const [menuItems, setMenuItems] = useState([])
   const [loading, setLoading] = useState(true)
-
   useEffect(() => {
     // Fetch menu items from an API or a local data source
     // Set the menu items to the state variable when the data is fetched
