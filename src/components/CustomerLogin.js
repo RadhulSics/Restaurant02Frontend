@@ -1,45 +1,50 @@
-import React, { useState } from 'react'
+import axios from "axios";
+import React, { useState } from "react";
 
-import "../components/Adminlogin.css"
+import "../components/CustomerLogin.css"
 
-export default function Form() {
-    const[Form,setForm]=useState({
-        username:"",
-        password:"",
-      })
-      const Handlechange=(a)=>{
-        setForm({...Form,[a.target.name]:a.target.value})
-      }
-      const Onsubmitchange=(event)=>{
-        event.preventDefault()
-        console.log(Form);
-        if(Form === 402){
-          alert("Login Successfully")
-        }
-        else if(Form === 505){
-          alert("incorrect password")
-        }
-        else if(Form === 506){
-          alert("incorrect username")
-        }
-        else{
-          alert("user not found")
-        }
-      }
+
+function Customerlogin() {
+
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+  function Change(e) {
+    setData({ ...data, [e.target.name]: e.target.value });
+  }
+  async function submit(e) {
+    e.preventDefault();
+    const result = await axios.post(
+      "http://localhost:3000/CustomerLogin",
+      data
+    );
+    console.log(result);
+    if (result.data.status === 200) {
+      alert("Login successful");
+      console.log("user data",result.data.data);
+      localStorage.setItem('userid',result.data.data._id)
+     
+    } else {
+      alert("Login failed");
+    }
+    console.log("result", result);
+  }
+
   return (
     <div class="customerlogin">
       <div
         class="form-control d-flex mx-auto "
         style={{
-          width: "37rem",
-          height: "25rem",
+          width: "33rem",
+          height: "28rem",
           marginLeft: "35rem",
           marginTop:"20rem",
           backgroundColor: " rgba(0, 0, 0, 0.326)",
           
         }}
       >
-        <form onSubmit={Onsubmitchange}>
+        <form onSubmit={submit}>
           <div class="p-2 w-100">
             {" "}
             <h2
@@ -50,7 +55,7 @@ export default function Form() {
                 color: "white",
               }}
             >
-            ADMIN LOGIN
+              LOG IN
             </h2>
           </div>
 
@@ -59,19 +64,19 @@ export default function Form() {
               class="form-label mt-2 w-50"
               style={{ marginLeft: "1rem", color: "white",fontSize:"1.5rem"}}
             >
-              username
+              Email:
             </label>
             <input
               class="form-control"
-              type="username"
-              name="username"
-              placeholder="Enter your valid username"
-              onChange={Handlechange}
+              type="email"
+              name="email"
+              placeholder="Enter your valid email"
+              onChange={Change}
               style={{
                 display: "flex",
                 flexDirection: "row",
                 marginLeft: "5rem",
-                width:"22rem",
+                width:"18rem",
                 backgroundColor:"rgba(240, 255, 255, 0.713)",
               }}
               required
@@ -90,12 +95,12 @@ export default function Form() {
               type="password"
               name="password"
               placeholder="Enter your password"
-              onChange={Handlechange}
+              onChange={Change}
               style={{
                 display: "flex",
                 flexDirection: "row",
                 marginLeft: "5rem",
-                width:"22rem",
+                width:"18rem",
                 backgroundColor:"rgba(240, 255, 255, 0.713)",
               }}
               required
@@ -107,17 +112,21 @@ export default function Form() {
           <button
             style={{
               backgroundColor: "Red",
-              marginLeft: "15rem",
+              marginLeft: "13rem",
               color: "black",
-              height:"2.5rem",
-              width:"6rem",
+              height:"3rem",
             }}
           >
             Log in
           </button>
           <br />
+          <p style={{ marginLeft: "12rem", marginBottom:"2rem" }}>
+            <a href="/CustomerForgotpass">Forgot your Password?</a>
+          </p>
         </form>
       </div>
     </div>
   );
 }
+
+export default Customerlogin;
