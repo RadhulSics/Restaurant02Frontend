@@ -16,9 +16,7 @@ import Customerlogin from "./components/CustomerLogin";
 
 import Adminlogin from "./components/Adminlogin";
 
-
-
-
+import StaffRegistarion from "./components/StaffRegistartion";
 
 
 
@@ -36,6 +34,7 @@ function App() {
         <Route path="/CustomerForgotpass" element={<CustomerForgotPass/>}/>
         <Route path="/Customerlogin" element={<Customerlogin/>}/>
         <Route path="/Adminlogin" element={<Adminlogin/>}/>
+        <Route path="/StaffRegistration" element={<StaffRegistarion/>}/> 
         
         
 
