@@ -1,32 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import {BrowserRouter,Routes, Route } from "react-router-dom";
+
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from'./components/Navbar';
-import Addfood from './components/Addfood';
-import Viewfood from './components/Viewfood';
-import StafReg from'./components/StafReg';
-import Reg from'./components/Reg.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CustomerForgotPass from "./components/CustomerForgotpass";
+
+import Customerlogin from "./components/CustomerLogin";
+
+import Adminlogin from "./components/Adminlogin"
+
+import  CustomerRegistration from"./components/CustomerRegistration"
+import "./components/CustomerRegistration.css"
+
+import Stafflogin from "./components/Stafflogin";
+
+import StaffForgotPass from "./components/StaffForgotPass";
+
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Addfood/>
-      <Viewfood/>
-      <StafReg/>
-      {/* <Staffregister/> */}
-      <BrowserRouter>
-      <Routes> 
-        
-        <Route path="/Navbar" element={<Navbar/>}/>
-         <Route path="/Addfood" element={<Addfood/>}/> 
-         <Route path="/Viewfood" element={<Viewfood/>}/>
-         <Route path="/StafReg"element={<StafReg/>}/> 
-</Routes>
-</BrowserRouter>
+
+
+     <BrowserRouter>
+     
+      <Routes>
+        <Route path="/CustomerRegistration" element={<CustomerRegistration/>}/>
+        <Route path="/CustomerForgotpass" element={<CustomerForgotPass/>}/>
+        <Route path="/Customerlogin" element={<Customerlogin/>}/>
+        <Route path="/Adminlogin" element={<Adminlogin/>}/>
+        <Route path="/Stafflogin" element={<Stafflogin/>}/>
+        <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
+     </Routes>
+     </BrowserRouter>
+
+
       
     </div>
   );
