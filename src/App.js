@@ -16,7 +16,7 @@ import Customerlogin from "./components/CustomerLogin";
 
 import Adminlogin from "./components/Adminlogin";
 
-import StaffviewBooking from "./components/StaffviewBooking";
+
 
 
 
@@ -36,7 +36,7 @@ function App() {
         <Route path="/CustomerForgotpass" element={<CustomerForgotPass/>}/>
         <Route path="/Customerlogin" element={<Customerlogin/>}/>
         <Route path="/Adminlogin" element={<Adminlogin/>}/>
-        <Route path="/StaffviewBooking" element={<StaffviewBooking/>}/>
+        
         
 
      </Routes>
