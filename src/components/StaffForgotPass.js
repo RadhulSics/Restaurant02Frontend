@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 
 
-function CustomerForgotPass() {
+
+function StaffForgotPass() {
   const [Data, setData] = useState({
     email: "",
     newpassword: "",
@@ -53,9 +54,9 @@ function CustomerForgotPass() {
           {" "}
           <h2
             class="text-center mt-3 mb-3"
-            style={{ marginLeft: "3rem", marginBottom: "3rem",color:"white",fontFamily:"Acme" }}
+            style={{ marginLeft: "3rem", marginBottom: "3rem",color:"white",fontFamily:"Acme"}}
           >
-            Customer Reset Password
+           Staff Reset Password
           </h2>
         </div>
 
@@ -150,4 +151,4 @@ function CustomerForgotPass() {
   );
 }
 
-export default CustomerForgotPass;
+export default StaffForgotPass;

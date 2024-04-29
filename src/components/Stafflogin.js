@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-import "../components/CustomerLogin.css"
 
 
-function Customerlogin() {
+function stafflogin() {
 
   const [data, setData] = useState({
     email: "",
@@ -16,7 +15,7 @@ function Customerlogin() {
   async function submit(e) {
     e.preventDefault();
     const result = await axios.post(
-      "http://localhost:3000/CustomerLogin",
+      "http://localhost:3000/StaffLogin",
       data
     );
     console.log(result);
@@ -53,6 +52,7 @@ function Customerlogin() {
                 marginLeft: "3rem",
                 marginTop: "1.5rem",
                 color: "white",
+                fontFamily:"Acme"
               }}
             >
               LOG IN
@@ -62,7 +62,7 @@ function Customerlogin() {
           <div class="d-flex p-2">
             <label
               class="form-label mt-2 w-50"
-              style={{ marginLeft: "1rem", color: "white",fontSize:"1.5rem"}}
+              style={{ marginLeft: "1rem", color: "white",fontSize:"1.5rem",fontFamily:"Slabo 27px"}}
             >
               Email:
             </label>
@@ -86,7 +86,7 @@ function Customerlogin() {
           <div class="d-flex p-2">
             <label
               class="form-label mt-2 w-50"
-              style={{ marginLeft: "1rem", color: "white" ,fontSize:"1.5rem"}}
+              style={{ marginLeft: "1rem", color: "white" ,fontSize:"1.5rem",fontFamily:"Slabo 27px"}}
             >
               Password:
             </label>
@@ -122,7 +122,7 @@ function Customerlogin() {
           </button>
           <br />
           <p style={{ marginLeft: "12rem", marginBottom:"2rem" }}>
-            <a href="/CustomerForgotpass">Forgot your Password?</a>
+            <a href="/StaffForgotPass">Forgot your Password?</a>
           </p>
         </form>
       </div>
@@ -130,4 +130,4 @@ function Customerlogin() {
   );
 }
 
-export default Customerlogin;
+export default stafflogin;
