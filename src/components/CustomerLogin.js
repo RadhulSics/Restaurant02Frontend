@@ -112,9 +112,10 @@ function Customerlogin() {
           <button
             style={{
               backgroundColor: "Red",
-              marginLeft: "13rem",
+              marginLeft: "14rem",
               color: "black",
-              height:"3rem",
+              height:"2.5rem",
+              width:"6rem",
             }}
           >
             Log in

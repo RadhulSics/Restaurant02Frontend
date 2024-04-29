@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import "../components/Adminlogin.css"
 
+const username="Admin@123";
+const password="@123";
 export default function Form() {
     const[Form,setForm]=useState({
         username:"",
@@ -13,13 +15,10 @@ export default function Form() {
       const Onsubmitchange=(event)=>{
         event.preventDefault()
         console.log(Form);
-        if(Form === 402){
+        if(username === Form.username && password === Form.password){
           alert("Login Successfully")
         }
-        else if(Form === 505){
-          alert("incorrect password")
-        }
-        else if(Form === 506){
+        else if(Form.username !== username && Form.password !== password){
           alert("incorrect username")
         }
         else{
@@ -115,7 +114,7 @@ export default function Form() {
           >
             Log in
           </button>
-          <br />
+          <br/>
         </form>
       </div>
     </div>
