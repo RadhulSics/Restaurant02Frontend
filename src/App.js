@@ -1,3 +1,4 @@
+
 import React from "react";
 import {BrowserRouter,Routes, Route } from "react-router-dom";
 
@@ -19,11 +20,10 @@ import StaffForgotPass from "./components/StaffForgotPass";
 
 
 
-
-
 function App() {
   return (
     <div className="App">
+
 
      <BrowserRouter>
      
@@ -37,6 +37,8 @@ function App() {
      </Routes>
      </BrowserRouter>
 
+
+      
     </div>
   );
 }
