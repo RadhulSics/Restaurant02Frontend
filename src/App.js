@@ -13,17 +13,11 @@ import Adminlogin from "./components/Adminlogin"
 import  CustomerRegistration from"./components/CustomerRegistration"
 import "./components/CustomerRegistration.css"
 
+import Stafflogin from "./components/Stafflogin";
+
+import StaffForgotPass from "./components/StaffForgotPass";
 
 
-// import logo from './logo.svg';
-// import './App.css';
-// import Landingpage1 from"./components/Landingpage1"
-// import "./components/Landingpage1.css"
-// import Landingpage from "./components/Landingpage"
-// import "./components/Landingpage.css"
-
-// import HomePage from "./components/Homepage";
-// import "./components/Homepage.css"
 
 
 
@@ -38,6 +32,8 @@ function App() {
         <Route path="/CustomerForgotpass" element={<CustomerForgotPass/>}/>
         <Route path="/Customerlogin" element={<Customerlogin/>}/>
         <Route path="/Adminlogin" element={<Adminlogin/>}/>
+        <Route path="/Stafflogin" element={<Stafflogin/>}/>
+        <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
      </Routes>
      </BrowserRouter>
 
