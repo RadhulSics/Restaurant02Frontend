@@ -1,4 +1,5 @@
 import React from 'react'
+import './Landingpage.css'
 
 
     
@@ -54,7 +55,6 @@ import React from 'react'
       </div>
       </header>
       </scroll>
-        
       )
       
     }

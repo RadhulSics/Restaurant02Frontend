@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useState } from "react";
-import"../components/CustomerRegistration.css"
-
+import"../components/StaffRegistration.css"
 
 function Projectreg() {
   const [state, setState] = useState({
