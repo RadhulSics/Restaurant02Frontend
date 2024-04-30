@@ -28,15 +28,34 @@ import './Landingpage.css'
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" >
                   
-                  <a  class="nav-link " href="#" style={{color:'black'}}>HOME</a>
+                  <a  class="nav-link " href="/" style={{color:'black'}}>HOME</a>
                 </li>
-                <li class="nav-item">
-                <a  class="nav-link " href="#" style={{color:'black'}}>NEW REGISTRATION</a>
+                <li class="nav-item" >
+                  
+                  <a  class="nav-link " href="/" style={{color:'black'}}>MENU</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link " href="#" style={{color:'black'}}>MENU</a>
-                </li>
+                <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+               CUSTOMER
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item active" href="/CustomerRegistration">Customer Registration</a></li>
+              <li><a class="dropdown-item" href="/CustomerLogin">Customer Login</a></li>
               </ul>
+
+              </div>
+                
+              
+              <div class="dropdown" >
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+               STAFF
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="/StaffRegistration">Staff Registration</a></li>
+    <li><a class="dropdown-item" href="/StaffLogin">Staff Login</a></li>
+  </ul>
+
+</div>
               <form class="d-flex" role="search">
                 <input
                   class="form-control me-2"
@@ -49,6 +68,7 @@ import './Landingpage.css'
                   Search
                 </button>
               </form>
+              </ul>
             </div>
           </div>
         </nav>
