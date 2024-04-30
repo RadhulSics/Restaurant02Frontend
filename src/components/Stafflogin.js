@@ -15,7 +15,7 @@ function stafflogin() {
   async function submit(e) {
     e.preventDefault();
     const result = await axios.post(
-      "http://localhost:3000/StaffLogin",
+      "http://localhost:3000/Stafflogin",
       data
     );
     console.log(result);
