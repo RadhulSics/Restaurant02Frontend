@@ -25,7 +25,7 @@ function Customerlogin() {
       alert("Login successful");
       console.log("user data",result.data.data);
       localStorage.setItem('userid',result.data.data._id)
-      navigate('/')
+      navigate('/Landingpage1')
      
     } else {
       alert("Login failed");

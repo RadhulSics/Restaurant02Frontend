@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import"../components/CustomerRegistration.css"
 
 
-function Projectreg() {
+function CustomerRegistration() {
   const [state, setState] = useState({
     firstname: "",
     lastname: "",
@@ -20,6 +20,9 @@ function Projectreg() {
   }
  async function Submit(e) {
     e.preventDefault();
+    const result=await axios
+    .post("http://localhost:3000/CustomerRegistation",
+    state)
     
     // alert("You registered succesfully")
     console.log(state);
@@ -27,7 +30,7 @@ function Projectreg() {
       alert("Password not matched");
     } else {
       alert("You registered succesfully");
-      const result=await axios.post("http://localhost:3000/Register",state)
+      
       console.log("result",result);
     }
   }
@@ -120,4 +123,4 @@ function Projectreg() {
   );
 }
 
-export default Projectreg;
+export default CustomerRegistration;

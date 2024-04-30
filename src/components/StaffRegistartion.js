@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useState } from "react";
 import"../components/StaffRegistration.css"
 
-function Projectreg() {
+function StaffRegistration() {
   const [state, setState] = useState({
     firstname: "",
     lastname: "",
@@ -26,7 +26,7 @@ function Projectreg() {
       alert("Password not matched");
     } else {
       alert("You registered succesfully");
-      const result=await axios.post("http://localhost:3000/Register",state)
+      const result=await axios.post("http://localhost:3000/StaffRegistation",state)
       console.log("result",result);
     }
   }
@@ -110,7 +110,7 @@ function Projectreg() {
           <label>I accept Terms and condition</label><br/>
          
           <button  onClick={Change} className='btn btn-primary' type="Register" href="#">Register</button><br/>
-          <p>already have an account?<a href="/Customerlogin">Log in</a></p>
+          <p>already have an account?<a href="/Stafflogin">Log in</a></p>
          
         </div>
       </form>
@@ -119,4 +119,4 @@ function Projectreg() {
   );
 }
 
-export default Projectreg;
+export default StaffRegistration;
