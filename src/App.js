@@ -26,6 +26,7 @@ import StaffForgotPass from "./components/StaffForgotPass";
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -44,16 +45,17 @@ function App() {
         <Route path="/Adminlogin" element={<Adminlogin/>}/>
 
         <Route path="/StaffRegistration" element={<StaffRegistarion/>}/> 
+       
         
+        
+
+   
+
+
         <Route path="/Stafflogin" element={<Stafflogin/>}/>
         <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
-
      </Routes>
-     
      </BrowserRouter>
-
-      
-     
 
 
 

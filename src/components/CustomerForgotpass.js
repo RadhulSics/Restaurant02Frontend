@@ -19,7 +19,7 @@ function CustomerForgotPass() {
       alert("Password and Confirm password must be same");
     } else {
       axios
-      .post("http://localhost:3000/forgotPassword",Data)
+      .post("http://localhost:3000/CustforgotPass",Data)
       .then((res)=>{
         console.log(res);
         if(res.data.status === 200){

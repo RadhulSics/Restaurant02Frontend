@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "../components/CustomerLogin.css"
 
 
 function Customerlogin() {
-
+  const navigate=useNavigate
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -24,6 +25,7 @@ function Customerlogin() {
       alert("Login successful");
       console.log("user data",result.data.data);
       localStorage.setItem('userid',result.data.data._id)
+      navigate('/Landingpage1')
      
     } else {
       alert("Login failed");
