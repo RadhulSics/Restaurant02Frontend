@@ -19,12 +19,17 @@ import Adminlogin from "./components/Adminlogin";
 
 import StaffRegistarion from "./components/StaffRegistartion";
 
-
 import Stafflogin from "./components/Stafflogin";
 
 import StaffForgotPass from "./components/StaffForgotPass";
 
+
+import Adminaddmenu from "./components/Adminaddmenu";
+import Admindashboard from "./components/Admindashboard";
+
+
 import Adminviewmenu from "./components/Adminviewmenu";
+
 
 
 
@@ -45,6 +50,8 @@ function App() {
         <Route path="/CustomerForgotpass" element={<CustomerForgotPass/>}/>
         <Route path="/Customerlogin" element={<Customerlogin/>}/>
         <Route path="/Adminlogin" element={<Adminlogin/>}/>
+        <Route path="/Adminaddmenu" element={<Adminaddmenu/>}/>
+        <Route path="/Admindashbord" element={<Admindashboard/>}/>
 
         <Route path="/StaffRegistration" element={<StaffRegistarion/>}/> 
        
