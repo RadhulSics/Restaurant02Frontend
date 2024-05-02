@@ -80,7 +80,7 @@ function Landingpage1() {
                     <p className="card-text" style={{color:"gray"}}><small className="text-body-secondary" >Last updated 3 mins ago</small></p>
                 
             </div>
-            <div className="col-md-8" style={{ maxWidth: "1240px", position: "absolute", bottom: "30rem", left: 0,marginLeft:"80rem",backgroundColor:"transparent" ,color:"white"}}>
+            <div className="col-md-8" style={{ maxWidth: "350px", position: "absolute", bottom: "30rem", left: 0,marginLeft:"80rem",backgroundColor:"transparent" ,color:"white"}}>
                 <div className="card-body">
                 <img src={food5} className="img-fluid rounded-start" alt="..." style={{height:"200px",width:"300px"}}/>
                 </div>
