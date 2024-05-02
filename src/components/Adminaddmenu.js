@@ -23,7 +23,7 @@ function Adminaddmenu() {
   const handleSubmit = (a) => {
     a.preventDefault();
     console.log(data);
-    axios.post("http://localhost:5000/Adminaddmenu", data, {
+    axios.post("http://localhost:4000/Adminaddmenu", data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

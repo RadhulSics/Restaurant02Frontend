@@ -58,7 +58,7 @@ function App() {
       
         <Route path="/Stafflogin" element={<Stafflogin/>}/>
         <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
-        <Route path="/Admineviewmenu" element={<Adminviewmenu/>}/>
+        <Route path="/Adminviewmenu" element={<Adminviewmenu/>}/>
 
      </Routes>
      </BrowserRouter>

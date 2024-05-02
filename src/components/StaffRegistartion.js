@@ -26,7 +26,7 @@ function StaffRegistration() {
       alert("Password not matched");
     } else {
       alert("You registered succesfully");
-      const result=await axios.post("http://localhost:3000/StaffRegistration",state)
+      const result=await axios.post("http://localhost:4000/StaffRegistration",state)
       console.log("result",result);
     }
   }
