@@ -21,7 +21,7 @@ function CustomerRegistration() {
  async function Submit(e) {
     e.preventDefault();
     const result=await axios
-    .post("http://localhost:3000/CustomerRegistation",
+    .post("http://localhost:4000/CustomerRegistation",
     state)
     
     // alert("You registered succesfully")

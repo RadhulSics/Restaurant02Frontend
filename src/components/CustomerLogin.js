@@ -17,7 +17,7 @@ function Customerlogin() {
   async function submit(e) {
     e.preventDefault();
     const result = await axios.post(
-      "http://localhost:3000/CustomerLogin",
+      "http://localhost:4000/CustomerLogin",
       data
     );
     console.log(result);

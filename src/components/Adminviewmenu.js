@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import Admindashboard from "./Admindashboard";
+import Admindashboard from "./Admindashboard";
 function Adminviewmenu() {
     const [state, setState] = useState([]);
     const fetchFood = async () => {
-        const response=await axios.get("http://localhost:5000/viewmenu");
+        const response=await axios.post("http://localhost:4000/Adminviewmenu");
         console.log(response.data.result);
         setState(response.data.result);
       };
       useEffect(() => {
-        fetchFood();m
+        fetchFood();
       }, []);
   return (
     <div style={{ display: "flex" }}>
       <div style={{ flex: "0 0 200px", backgroundColor: "#f0f0f0" }}>
-        {/* <Admindashboard /> */}
+        <Admindashboard />
       </div>
     <div className="m-4">
       <ul style={{ listStyleType: "none" }} className="p-3">
@@ -22,7 +22,7 @@ function Adminviewmenu() {
           <li key={x._id} className="m-3 p-4 d-inline-flex">
             <div className="shadow-lg p-3 bg-body-tertiary rounded">
               <img
-                src={`http://localhost:5000/${x.image}`}
+                src={`http://localhost:4000/${x.image}`}
                 className="img-fluid"
                 alt="..."
                 style={{ width: "15rem", height: "15rem" }}
