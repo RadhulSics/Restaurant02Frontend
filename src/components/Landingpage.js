@@ -73,7 +73,9 @@ function Landingpage1() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Staff
+
+       STAFF
+
               </button>
               <ul className="dropdown-menu">
                 <li>
@@ -96,7 +98,9 @@ function Landingpage1() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Customer
+
+                CUSTOMER
+
               </button>
               <ul className="dropdown-menu">
                 <li>
