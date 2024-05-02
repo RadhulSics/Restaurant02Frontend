@@ -1,81 +1,204 @@
-import React from 'react'
-import './Landingpage.css'
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+// import "../components/Nav.css";
 
+function Landingpage1() {
+  const navigate = useNavigate();
+  let custid = localStorage.getItem("custId");
+  let custname = localStorage.getItem("fname");
+  let staffid = localStorage.getItem("staffId");
+  let staffname = localStorage.getItem("sfname");
 
-    
-    function Navbar() {
-      return(
-        <scroll>
-        <header>
-      <div className='nav'>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary " id="nav1"  >
-          <div class="container-fluid">
-            <a class="navbar-brand">
-              NILA RESTAURANT
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" >
-                  
-                  <a  class="nav-link " href="/" style={{color:'black'}}>HOME</a>
-                </li>
-                <li class="nav-item" >
-                  
-                  <a  class="nav-link " href="/" style={{color:'black'}}>MENU</a>
-                </li>
-                <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-               CUSTOMER
+  const handleClick = () => {
+    localStorage.removeItem("custId");
+    localStorage.removeItem("fname");
+    alert("You have logged out");
+    navigate("/Customerlogin");
+    window.location.reload(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("staffId");
+    localStorage.removeItem("sfname");
+    alert("You have logged out");
+    navigate("/stafflogin");
+    window.location.reload(false);
+  };
+
+  return (
+    <>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary" id="nav1">
+        <div className="container-fluid">
+          <a className="navbar-brand" style={{ color: "red" }}>
+            RESTAURANT PAGE
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  to="/"
+                  className="nav-link active"
+                  aria-current="page"
+                  style={{ color: "blue" }}
+                >
+                  HOME
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="#"
+                  className="nav-link active"
+                  aria-current="page"
+                  style={{ color: "blue" }}
+                >
+                  MENU
+                </Link>
+              </li>
+            </ul>
+            <div className="dropdown">
+              <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                STAFF
               </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item active" href="/CustomerRegistration">Customer Registration</a></li>
-              <li><a class="dropdown-item" href="/CustomerLogin">Customer Login</a></li>
-              </ul>
-
-              </div>
-                
-              
-              <div class="dropdown" >
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-               STAFF
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-    <li><a class="dropdown-item active" href="/StaffRegistration">Staff Registration</a></li>
-    <li><a class="dropdown-item" href="/StaffLogin">Staff Login</a></li>
-  </ul>
-
-</div>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search" 
-                  style={{color:'transparent'}}
-                />
-                <button class="btn btn-outline-success" type="submit" style={{color:'black'}}>
-                  Search
-                </button>
-              </form>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/stafflogin">
+                    Staff Login
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/StaffRegistration">
+                    Staff Registration
+                  </Link>
+                </li>
               </ul>
             </div>
+
+            <div className="dropdown">
+              <button
+                className="btn btn-primary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                CUSTOMER
+              </button>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/Customerlogin">
+                    Customer Login
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/CustomerRegistration">
+                    Customer Registration
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <ul className="nav justify-content-end mx-5">
+              {custid != null ? (
+                <>
+                  <li className="nav-item dropdown">
+                    <Link className="nav-link" to="#">
+                      View Order
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Link className="nav-link" to="#">
+                      Menu item
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {custname}
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link className="dropdown-item" onClick={handleClick}>
+                          Log out
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <Link className="nav-link active" to="#">
+                      cart
+                    </Link>
+                  </li>
+                </>
+              ) : staffid != null ? (
+                <>
+                  <li className="nav-item dropdown">
+                    <Link className="nav-link" to="#">
+                      View Order
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Link className="nav-link" to="#">
+                      Menu item
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {staffname}
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link className="dropdown-item" onClick={handleLogout}>
+                          Log out
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                </>
+              ) : (
+                <form className="d-flex" role="search">
+                  <input
+                    className="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button className="btn btn-outline-success" type="submit" style={{ color: "blue" }}>
+                    Search
+                  </button>
+                </form>
+              )}
+            </ul>
           </div>
-        </nav>
-      </div>
-      </header>
-      </scroll>
-      )
-      
-    }
-export default Navbar
+        </div>
+      </nav>
+    </>
+  );
+}
+
+export default Landingpage1;

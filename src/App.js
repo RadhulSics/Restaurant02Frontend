@@ -24,6 +24,8 @@ import Stafflogin from "./components/Stafflogin";
 
 import StaffForgotPass from "./components/StaffForgotPass";
 
+import Adminviewmenu from "./components/Adminviewmenu";
+
 
 
 
@@ -46,14 +48,11 @@ function App() {
 
         <Route path="/StaffRegistration" element={<StaffRegistarion/>}/> 
        
-        
-        
-
-   
-
-
+      
         <Route path="/Stafflogin" element={<Stafflogin/>}/>
         <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
+        <Route path="/Admineviewmenu" element={<Adminviewmenu/>}/>
+
      </Routes>
      </BrowserRouter>
 
