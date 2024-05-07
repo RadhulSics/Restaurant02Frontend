@@ -1,9 +1,11 @@
 import axios from 'axios'
 import React, { useState } from "react";
 import"../components/CustomerRegistration.css"
+import { useNavigate } from 'react-router-dom';
 
 
 function CustomerRegistration() {
+  const navigate=useNavigate()
   const [state, setState] = useState({
     firstname: "",
     lastname: "",
@@ -28,6 +30,7 @@ function CustomerRegistration() {
     console.log(state);
     if (state.password !== state.confirmpassword) {
       alert("Password not matched");
+      navigate("/Customerlogin")
     } else {
       alert("You registered succesfully");
       

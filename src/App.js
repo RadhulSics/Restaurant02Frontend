@@ -30,6 +30,10 @@ import Admindashboard from "./components/Admindashboard";
 
 import Adminviewmenu from "./components/Adminviewmenu";
 
+import Viewfood from "./components/Viewfood";
+
+import Editfood from "./components/Editfood";
+
 
 
 
@@ -59,6 +63,8 @@ function App() {
         <Route path="/Stafflogin" element={<Stafflogin/>}/>
         <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
         <Route path="/Adminviewmenu" element={<Adminviewmenu/>}/>
+        <Route path="/Editfood" element={<Editfood/>}/>
+        
 
      </Routes>
      </BrowserRouter>
