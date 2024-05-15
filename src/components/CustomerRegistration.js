@@ -116,7 +116,7 @@ function CustomerRegistration() {
           ></input>
           <label>I accept Terms and condition</label><br/>
          
-          <button  onClick={Change} className='btn btn-primary' type="Register" href="#">Register</button><br/>
+          <button className='btn btn-primary' type="Register" href="#">Register</button><br/>
           <p>already have an account?<a href="/Customerlogin">Log in</a></p>
          
         </div>

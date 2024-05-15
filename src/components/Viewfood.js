@@ -43,7 +43,7 @@ return (
 <li key={x._id} className="m-3 p-4 d-inline-flex ">
 <div className="shadow-lg p-3 bg-body-tertiary rounded">
 <img
-src={`http://localhost:4000/${x.image}`}
+src={`http://localhost:3500/${x.image}`}
 className="img-fluid"
 alt="..."
 style={{ width: "15rem", height: "15rem" }}

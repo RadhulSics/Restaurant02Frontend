@@ -24,11 +24,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
  import StaffForgotPass from "./components/StaffForgotPass";
 
 
- import Adminaddmenu from "./components/Adminaddmenu";
- import Admindashboard from "./components/Admindashboard";
+import Adminaddmenu from "./components/Adminaddmenu";
+import Admindashboard from "./components/Admindashboard";
 
 
- import Adminviewmenu from "./components/Adminviewmenu";
+import Adminviewmenu from "./components/Adminviewmenu";
 
 import Editfood from "./components/Editfood";
  import Editfooddetails from "./components/Editfooddetails";
@@ -70,6 +70,9 @@ function App() {
         <Route path="/Stafflogin" element={<Stafflogin/>}/>
         <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
         <Route path="/Adminviewmenu" element={<Adminviewmenu/>}/>
+        <Route path="/Editfood" element={<Editfood/>}/>
+        <Route path="/Editfooddetails/:id" element={<Editfooddetails/>}/>
+        
 
          <Route path="/Editfood" element={<Editfood/>}/> 
          <Route path="/Editfooddetails:id" element={<Editfooddetails/>}/> 
@@ -83,9 +86,6 @@ function App() {
         <Route path="/Payment" element={<Payment/>}/>
      </Routes>
      </BrowserRouter>
-
-
-
       
     </div>
   );

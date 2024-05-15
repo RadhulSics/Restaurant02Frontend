@@ -4,7 +4,7 @@ function Admindashboard() {
   return (
       <div style={{ display: 'flex', flexDirection: 'column',height:"100rem", width: '200px', backgroundColor: '#f0f0f0'}}>
       <h2>ADMIN</h2>
-      <a href="/Adminaddmenu" style={{ padding: '10px', textDecoration: 'none', backgroundColor: 'gray' }}>ADD MENU</a>
+      <a href="/Adminaddmenu" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>ADD MENU</a>
       <a href="/Adminviewmenu" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>VIEW MENU</a>
       <a href="/Editfood" style={{ padding: '10px', textDecoration: 'none', color: 'black' }}>EDIT FOOD</a>
       <ul className="nav-item dropdown">

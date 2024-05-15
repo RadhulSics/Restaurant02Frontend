@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Landingpage1() {
-  
   return (
     <scroll>
     <div className='nav'>
@@ -29,20 +28,20 @@ function Landingpage1() {
               </li>
               <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Customer Registration
+           CUSTOMER REGISTRATION
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/CustomerRegistration">Registration</a></li>
-            <li><a class="dropdown-item" href="/Customerlogin">Login</a></li>
+            <li><a class="dropdown-item" href="/CustomerRegistration">REGISTRATION</a></li>
+            <li><a class="dropdown-item" href="/Customerlogin">LOGIN</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Staff Registation
+           STAFF REGISTARTION
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/StaffRegistration">Registration</a></li>
-            <li><a class="dropdown-item" href="/Stafflogin">Login</a></li>
+            <li><a class="dropdown-item" href="/StaffRegistration">REGISTARTION</a></li>
+            <li><a class="dropdown-item" href="/Stafflogin">LOGIN</a></li>
           </ul>
         </li>
               <li class="nav-item">
@@ -58,7 +57,7 @@ function Landingpage1() {
                 style={{color:'transparent'}}
               />
               <button class="btn btn-outline-success" type="submit" style={{color:'black'}}>
-                Search
+                SEARCH
               </button>
             </form>
           </div>
