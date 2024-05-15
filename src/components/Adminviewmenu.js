@@ -4,7 +4,7 @@ import Admindashboard from "./Admindashboard";
 function Adminviewmenu() {
     const [state, setState] = useState([]);
     const fetchFood = async () => {
-        const response=await axios.post("http://localhost:4000/Adminviewmenu");
+        const response=await axios.post("http://localhost:4000/viewmenu");
         console.log(response.data.result);
         setState(response.data.result);
       };
@@ -13,7 +13,7 @@ function Adminviewmenu() {
       }, []);
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ flex: "0 0 200px", backgroundColor: "#f0f0f0" }}>
+      <div style={{ flex: "0 0 200px", backgroundColor: "#skyblue" }}>
         <Admindashboard />
       </div>
     <div className="m-4">

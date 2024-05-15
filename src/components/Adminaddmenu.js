@@ -23,7 +23,7 @@ function Adminaddmenu() {
   const handleSubmit = (a) => {
     a.preventDefault();
     console.log(data);
-    axios.post("http://localhost:4000/Adminaddmenu", data, {
+    axios.post("http://localhost:4000/addmenu", data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -44,7 +44,7 @@ function Adminaddmenu() {
   }
   
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex" ,}}>
       <div style={{ flex: "0 0 200px", backgroundColor: "#f0f0f0" }}>
         <Admindashboard />
       </div>
@@ -56,9 +56,10 @@ function Adminaddmenu() {
         borderRadius: "0.5rem",
       }}
     >
+      
       <form className="form-control d-block bg-warning-subtle">
-        <div>
-          <h2 className="text-center mt-3 mb-3">Add food items</h2>
+        <div >
+          <h2 className="text-center mt-3 mb-3"  >Add food items</h2>
         </div>
         <div className="d-flex p-2">
           <label className="form-label" style={{ width: "7rem" }}>

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 function Viewfood() {
+const navigate=useNavigate()
 const [state, setState] = useState([]);
-let custid=localStorage.getItem('custId')
+let userid=localStorage.getItem('userid')
 const [cartdata,setCartdata] = useState({
-userid:custid,
+userid:userid,
 count:'1'
 })
 console.log(cartdata)
 const fetchFood = async () => {
-const response = await axios.get("http://localhost:3500/viewfood");
+const response = await axios.post("http://localhost:4000/viewmenu");
 console.log(response.data.result);
 setState(response.data.result);
 };
@@ -18,11 +21,13 @@ fetchFood();
 }, []);
 const handleClick = (id) => {
 console.log(id)
-axios.post(`http://localhost:3500/addcart/${id}`,cartdata)
+axios.post(`http://localhost:4000/addcart/${id}`,cartdata)
 .then((res) => {
 console.log(res);
 if (res.data.status === 200) {
 alert(res.data.msg);
+navigate('/Viewcart')
+
 } else {
 alert(res.data.msg);
 }
@@ -38,7 +43,7 @@ return (
 <li key={x._id} className="m-3 p-4 d-inline-flex ">
 <div className="shadow-lg p-3 bg-body-tertiary rounded">
 <img
-src={`http://localhost:3500/${x.image}`}
+src={`http://localhost:4000/${x.image}`}
 className="img-fluid"
 alt="..."
 style={{ width: "15rem", height: "15rem" }}
@@ -68,6 +73,7 @@ Price: {"\u20B9"}
 <button className="btn btn-primary" onClick={()=>{handleClick(x._id)}}>
 Add cart
 </button>
+
 </div>
 </div>
 </li> 
