@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useState } from "react";
-import"../components/StaffRegistration.css"
+import"../components/StaffRegistration.css";
+import { useNavigate } from 'react-router-dom';
 
 function StaffRegistration() {
+  const navigate=useNavigate()
   const [state, setState] = useState({
     firstname: "",
     lastname: "",
@@ -24,8 +26,10 @@ function StaffRegistration() {
     console.log(state);
     if (state.password !== state.confirmpassword) {
       alert("Password not matched");
+  
     } else {
       alert("You registered succesfully");
+      navigate("/StaffLogin")
       const result=await axios.post("http://localhost:4000/StaffRegistration",state)
       console.log("result",result);
     }
@@ -109,7 +113,7 @@ function StaffRegistration() {
           ></input>
           <label>I accept Terms and condition</label><br/>
          
-          <button  onClick={Change} className='btn btn-primary' type="Register" href="#">Register</button><br/>
+          <button  className='btn btn-primary' type="Register" href="#">Register</button><br/>
           <p>already have an account?<a href="/Stafflogin">Log in</a></p>
          
         </div>
@@ -118,5 +122,4 @@ function StaffRegistration() {
     </div>
   );
 }
-
 export default StaffRegistration;

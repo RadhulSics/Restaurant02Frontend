@@ -4,7 +4,7 @@ import Admindashboard from "./Admindashboard";
 function Adminviewmenu() {
     const [state, setState] = useState([]);
     const fetchFood = async () => {
-        const response=await axios.post("http://localhost:4000/Adminviewmenu");
+        const response=await axios.post("http://localhost:4000/viewmenu");
         console.log(response.data.result);
         setState(response.data.result);
       };
