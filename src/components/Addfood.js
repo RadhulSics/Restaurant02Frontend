@@ -20,7 +20,7 @@ const handleSubmit = (a) => {
 a.preventDefault();
 console.log(data);
 axios
-.post("http://localhost:3500/addfood", data,{
+.post("http://localhost:4000/addfood", data,{
 headers: {
 "Content-Type": "multipart/form-data",
 },

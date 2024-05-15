@@ -25,14 +25,17 @@ import StaffForgotPass from "./components/StaffForgotPass";
 
 
 import Adminaddmenu from "./components/Adminaddmenu";
+
 import Admindashboard from "./components/Admindashboard";
 
 
 import Adminviewmenu from "./components/Adminviewmenu";
 
-import Viewfood from "./components/Viewfood";
 
 import Editfood from "./components/Editfood";
+
+import Editfooddetails from "./components/Editfooddetailes";
+
 
 
 
@@ -64,13 +67,11 @@ function App() {
         <Route path="/StaffForgotPass" element={<StaffForgotPass/>}/>
         <Route path="/Adminviewmenu" element={<Adminviewmenu/>}/>
         <Route path="/Editfood" element={<Editfood/>}/>
+        <Route path="/Editfooddetails/:id" element={<Editfooddetails/>}/>
         
 
      </Routes>
      </BrowserRouter>
-
-
-
       
     </div>
   );

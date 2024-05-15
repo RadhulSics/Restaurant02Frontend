@@ -24,11 +24,26 @@ function Landingpage1() {
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item" >
                 
-                <a  class="nav-link " href="#" style={{color:'black'}}>HOME</a>
+                <a  class="nav-link " href="/" style={{color:'black'}}>HOME</a>
               </li>
-              <li class="nav-item">
-              <a  class="nav-link " href="#" style={{color:'black'}}>NEW REGISTRATION</a>
-              </li>
+              <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           CUSTOMER REGISTRATION
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/CustomerRegistration">REGISTRATION</a></li>
+            <li><a class="dropdown-item" href="/Customerlogin">LOGIN</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           STAFF REGISTARTION
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/StaffRegistration">REGISTARTION</a></li>
+            <li><a class="dropdown-item" href="/Stafflogin">LOGIN</a></li>
+          </ul>
+        </li>
               <li class="nav-item">
               <a class="nav-link " href="#" style={{color:'black'}}>MENU</a>
               </li>
@@ -42,7 +57,7 @@ function Landingpage1() {
                 style={{color:'transparent'}}
               />
               <button class="btn btn-outline-success" type="submit" style={{color:'black'}}>
-                Search
+                SEARCH
               </button>
             </form>
           </div>
