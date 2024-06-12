@@ -41,22 +41,24 @@ function Adminaddmenu() {
       alert("failed to add")
     });
     
+    
   }
   
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ flex: "0 0 200px", backgroundColor: "#f0f0f0" }}>
+      <div style={{ flex: "", backgroundColor: "" }}>
         <Admindashboard />
       </div>
     <div
       className="mx-auto shadow-lg mb-5"
       style={{
         width: "25rem",
-        marginTop: "7rem",
+        height:"25rem",
+        marginTop: "17rem",
         borderRadius: "0.5rem",
       }}
     >
-      <form className="form-control d-block bg-warning-subtle">
+      <form >
         <div>
           <h2 className="text-center mt-3 mb-3">Add food items</h2>
         </div>

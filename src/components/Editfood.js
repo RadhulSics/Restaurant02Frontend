@@ -53,7 +53,7 @@ function Editfood() {
                   src={`http://localhost:4000/${x.image}`}
                   className="img-fluid"
                   alt="..."
-                  style={{ width: "30rem", height: "30rem" }}
+                  style={{ width: "15rem", height: "15rem" }}
                 />
                 <div>
                   <h4 className="mt-2">{x.foodname}</h4>
