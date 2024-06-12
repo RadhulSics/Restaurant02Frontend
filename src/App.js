@@ -36,6 +36,19 @@ import Editfood from "./components/Editfood";
 
 import Editfooddetails from "./components/Editfooddetailes";
 
+import ViewOrders from "./components/ViewOrders";
+
+ import Viewcart from "./components/Viewcart";
+
+import Viewfood from "./components/Viewfood";
+import Addfood from "./components/Addfood";
+
+import Payment from "./components/Payment"
+import Customerorders from "./components/Customerorder";
+import Stafforder from "./components/Stafforder";
+import Stafforderconfirm from "./components/Stafforderconfirm";
+import Staffviewfood from "./components/Staffviewfood";
+import Custorder from "./components/Custorder"
 
 
 
@@ -69,6 +82,23 @@ function App() {
         <Route path="/Editfood" element={<Editfood/>}/>
         <Route path="/Editfooddetails/:id" element={<Editfooddetails/>}/>
         
+        <Route path="/ViewOrders" element={<ViewOrders/>}/>
+   
+        <Route path="/Viewcart" element={<Viewcart/>}/>
+   
+        <Route path="/Viewfood" element={<Viewfood/>}/>
+        <Route path="/Addfood" element={<Addfood/>}/>
+     
+        <Route path="/Payment" element={<Payment/>}/>
+
+        <Route path="/Customerorder" element={<Customerorders/>}/>
+
+        <Route path="/Stafforders" element={<Stafforder/>}/>
+
+        <Route path="/Stafforderconfirm/:id" element={<Stafforderconfirm/>}/>
+
+        <Route path="/Staffviewfood" element={<Staffviewfood/>}/>
+        <Route path="/Custorder" element={<Custorder/>}/>
 
      </Routes>
      </BrowserRouter>

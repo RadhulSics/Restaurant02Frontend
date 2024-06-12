@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 import "../components/CustomerLogin.css"
 
 
-function Customerlogin() {
 
+function Customerlogin() {
+const navigate=useNavigate()
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -23,8 +25,10 @@ function Customerlogin() {
     console.log(result);
     if (result.data.status === 200) {
       alert("Login successful");
+      navigate('/')
       console.log("user data",result.data.data);
       localStorage.setItem('userid',result.data.data._id)
+      localStorage.setItem('firstname',result.data.data.firstname)
      
      
     } else {

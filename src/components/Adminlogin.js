@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
 import "../components/Adminlogin.css"
-
+import { useNavigate } from 'react-router-dom'; 
 const username="Admin@123";
 const password="@123";
 export default function Form() {
+  const navigate=useNavigate()
     const[Form,setForm]=useState({
         username:"",
         password:"",
@@ -17,6 +18,7 @@ export default function Form() {
         console.log(Form);
         if(username === Form.username && password === Form.password){
           alert("Login Successfully")
+          navigate('/Admindashbord')
         }
         else if(Form.username !== username && Form.password !== password){
           alert("incorrect username")
